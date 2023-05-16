@@ -1,0 +1,265 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Fjalla One", sans-serif;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* header */
+header > section {
+  height: 80px;
+  padding: 10px 20px 10px 20px;
+  background-color: #66768a;
+  color: white;
+  /* border: 5px solid black; */
+}
+
+header section section {
+  /* border: 5px solid black; */
+  float: left;
+  width: 33.3333%;
+}
+
+header a {
+  color: white;
+  margin-right: 10px;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header img {
+  display: block;
+  margin: 0 auto;
+}
+
+header button {
+  margin: 0 0 0 80%;
+  padding: 10px;
+  border-radius: 5px;
+  color: #66768a;
+  border-color: #66768a;
+  font-weight: bold;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* where grit meets opportunity section */
+.wheregrit {
+  background-color: #66768a;
+  color: white;
+}
+
+.wheregrit h1 {
+  font-size: 6rem;
+  text-align: center;
+  padding: 10px 0px 50px 0px;
+}
+
+.wheregrit video {
+  display: block;
+  margin: 10px auto;
+}
+
+.wheregrit p {
+  margin: 0 20%;
+  color: white;
+  font-size: 2rem;
+}
+
+.wheregrit span {
+  display: block;
+  text-align: center;
+  padding: 20px 0px 20px 0px;
+  font-size: 1.5rem;
+}
+
+/* why section */
+
+.whysection {
+  /* border: 5px solid black; */
+  width: 100%;
+  height: 20%;
+}
+
+.whysection h2 {
+  font-size: 4rem;
+  text-align: center;
+  margin: 50px 0 0 0;
+  color: #161f2a;
+}
+
+p {
+  font-size: 1.5rem;
+  padding: 20px 0px 0px 0px;
+  text-align: center;
+  color: #161f2a;
+  margin: 0 20%;
+}
+
+/* visit gym section*/
+
+.visitgym {
+  background-color: #dbdfe2;
+  height: 45%;
+  /* border: 5px solid black; */
+  padding: 3% 10% 3% 10%;
+}
+
+.visitgym .fiftysection > section {
+  display: block;
+  text-align: center;
+}
+
+.visitgym h4 {
+  text-align: center;
+}
+
+.visitgym button {
+  display: block;
+  margin: 15px auto;
+  background-color: #dbdfe2;
+  margin: 10px auto;
+  padding: 10px 30px;
+  border-color: gray;
+  border-width: 1px;
+  border-style: solid;
+  /* font-weight: bold; */
+  font-family: "Fjalla One", sans-serif;
+  font-size: 15px;
+}
+
+.fiftysection {
+  width: 50%;
+  float: left;
+  margin: 0% 0 0% 0%;
+  /* border: 5px solid black; */
+}
+
+/* volunteer section */
+.volunteer {
+  height: 30%;
+  /* border: 5px solid black; */
+  padding: 5% 5% 5% 5%;
+}
+
+.volunteer h2 {
+  color: #161f2a;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.volunteer p {
+  text-align: center;
+  color: #161f2a;
+}
+
+.volunteer button {
+  display: block;
+  margin: 10px auto;
+  background-color: white;
+  padding: 10px 30px;
+  border-color: #66768a;
+  border-width: 1px;
+  border-style: solid;
+}
+/* footer section */
+footer {
+  height: 20%;
+  background-color: #161f2a;
+  color: white;
+  clear: both;
+}
+footer > section:first-child {
+  padding: 20px 30px;
+}
+.iconSection {
+  color: white;
+  width: 15%;
+  float: left;
+  outline: 2px solid white;
+}
+.iconSection span {
+  color: #66768a;
+}
+.iconSection a {
+  color: white;
+}
+.midSection {
+  width: 70%;
+  float: left;
+}
+.addressSection {
+  width: 15%;
+  color: white;
+  outline: 2px solid lightcoral;
+  float: left;
+}
+.addressSection > div > span {
+  font-size: 1rem;
+}
+.copyrightSection {
+  padding: 20px 0px 0px 0px;
+  font-size: 1.5rem;
+  float: left;
+  color: white;
+  width: 100%;
+  border-top: solid 2px white;
+}
+.copyrightSection img {
+  float: right;
+}
+footer i {
+  margin: 0px 10px 0px 0px;
+}
+footer > section > section > div > a {
+  text-decoration: none;
+  margin: 10px 29% 20px 0px;
+}
+
+/* .new-line::before {
+  content: "\A";
+  white-space: pre;
+} */
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media (max-width: 600px) {
+}

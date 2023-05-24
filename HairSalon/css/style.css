@@ -74,7 +74,7 @@ header li img {
   background-size: cover;
   background-position: right;
   color: white;
-  height: 80vh;
+  /* height: 80vh; change to if using mask*/
   padding-top: 15vmin;
   padding-left: 15vmin;
   padding-right: 0;
@@ -87,7 +87,6 @@ h1 {
   margin: 30px 0px 30px 0px;
   font-size: 1.5rem;
 }
-/* fix the span so that it moves all the way to the right of the screen */
 .rotateText {
   position: absolute;
   top: 60%;
@@ -100,10 +99,9 @@ h1 {
   height: 5rem;
   width: 17rem;
   background-color: black;
-  /* text-align: center; */
 }
 /* OUR SERVICES */
-/* fix the span in our services link */
+
 .centered-text {
   display: block;
 }
@@ -142,7 +140,6 @@ h1 {
 /* COUPON */
 /* ARTICLES */
 .article-section {
-  height: 50vh;
   padding: 5rem 25rem;
 }
 .article-section article {
@@ -172,7 +169,6 @@ article img {
 /* ARTICLES */
 /* MOMENTUM SECTION */
 .momentum {
-  height: 50vh;
   padding: 10rem 25rem;
   background-color: #f3f4f6;
 }
@@ -222,8 +218,7 @@ h4 {
 /* MOMENTUM SECTION */
 /* HAIR STYLISTS */
 .hair_stylist {
-  padding: 15rem 20rem;
-  height: 60vh;
+  margin: 8rem 0;
 }
 .hair_stylist section {
   position: relative;
@@ -233,6 +228,7 @@ h4 {
 .hair_stylist img {
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 .hair_stylist div {
   color: white;
@@ -261,9 +257,8 @@ h4 {
 .ad_section {
   display: flex;
   justify-content: center;
-  padding: 0rem 25rem;
+
   position: relative;
-  height: 60vh;
 }
 .ad_section section {
   background-color: #f3f4f6;
@@ -276,6 +271,7 @@ h4 {
 .ad_section img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .ad_section p {
   margin: 2rem 0;
@@ -303,19 +299,21 @@ h4 {
 /* LOOKBOOK SECTOIN */
 .lookbook_header {
   text-align: center;
-  height: 15vh;
+  margin: 5rem;
 }
 .lookbook_header p {
   font-size: 5rem;
   font-family: "EB Garamond", serif;
 }
+/* PHOTO_GRID */
 .photo_grid {
-  padding: 0 25rem;
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(3, 1fr);
 }
 .photo_grid section {
+  height: 100%;
+  width: 100%;
 }
 .photo_grid img {
   height: 100%;
@@ -324,10 +322,54 @@ h4 {
 .grid_row_2 {
   grid-row: span 2;
 }
+.padStylerAdPhoto {
+  padding: 0 25rem;
+}
+/* PHOTO_GRID */
 /* LOOKBOOK SECTOIN */
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+@media (max-width: 1350px) {
+  .hair_stylist {
+    display: block;
+  }
+  .hair_stylist section {
+    margin: 5rem auto;
+  }
+  .momentum {
+    display: block;
+    padding: 2rem;
+  }
+  .momentum section {
+    margin: 2rem auto;
+  }
+}
 
+@media (max-width: 1000px) {
+  .rotateText {
+    display: none;
+  }
+  .padStylerAdPhoto {
+    padding: 0 5rem;
+  }
+  .article-section {
+    padding: 0;
+    display: block;
+  }
+  .article-section article {
+    margin: 0 auto;
+  }
+
+  .photo_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (max-width: 600px) {
+  .ad_section section + section {
+    display: none;
+  }
+  .photo_grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

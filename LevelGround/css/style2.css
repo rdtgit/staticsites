@@ -18,8 +18,8 @@
 }
 
 /******************************************
-/* BASE STYLES
-/*******************************************/
+  /* BASE STYLES
+  /*******************************************/
 
 html {
   font-size: 62.5%;
@@ -32,20 +32,18 @@ body {
 }
 
 /******************************************
-/* LAYOUT
-/*******************************************/
+  /* LAYOUT
+  /*******************************************/
 
 /* header */
 header > section {
   height: 80px;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px;
   background-color: #66768a;
   color: white;
-  /* border: 5px solid black; */
 }
 
 header section section {
-  /* border: 5px solid black; */
   float: left;
   width: 33.3333%;
 }
@@ -88,7 +86,7 @@ button:hover {
 .wheregrit h1 {
   font-size: 6rem;
   text-align: center;
-  padding: 10px 0px 50px 0px;
+  padding: 10px 0;
 }
 
 .wheregrit video {
@@ -105,14 +103,13 @@ button:hover {
 .wheregrit span {
   display: block;
   text-align: center;
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0;
   font-size: 1.5rem;
 }
 
 /* why section */
 
 .whysection {
-  /* border: 5px solid black; */
   width: 100%;
   height: 20%;
 }
@@ -120,13 +117,13 @@ button:hover {
 .whysection h2 {
   font-size: 4rem;
   text-align: center;
-  margin: 50px 0 0 0;
+  margin: 50px 0 0;
   color: #161f2a;
 }
 
-p {
+.whysection p {
   font-size: 1.5rem;
-  padding: 20px 0px 0px 0px;
+  padding: 20px 0;
   text-align: center;
   color: #161f2a;
   margin: 0 20%;
@@ -137,8 +134,7 @@ p {
 .visitgym {
   background-color: #dbdfe2;
   height: 45%;
-  /* border: 5px solid black; */
-  padding: 3% 10% 3% 10%;
+  padding: 3% 10%;
 }
 
 .visitgym .fiftysection > section {
@@ -159,7 +155,6 @@ p {
   border-color: gray;
   border-width: 1px;
   border-style: solid;
-  /* font-weight: bold; */
   font-family: "Fjalla One", sans-serif;
   font-size: 15px;
 }
@@ -168,14 +163,12 @@ p {
   width: 50%;
   float: left;
   margin: 0% 0 0% 0%;
-  /* border: 5px solid black; */
 }
 
 /* volunteer section */
 .volunteer {
   height: 30%;
-  /* border: 5px solid black; */
-  padding: 5% 5% 5% 5%;
+  padding: 5% 5%;
 }
 
 .volunteer h2 {
@@ -198,6 +191,7 @@ p {
   border-width: 1px;
   border-style: solid;
 }
+
 /* footer section */
 footer {
   height: 20%;
@@ -205,62 +199,72 @@ footer {
   color: white;
   clear: both;
 }
+
 footer > section:first-child {
   padding: 20px 30px;
 }
+
 .iconSection {
   color: white;
   width: 15%;
   float: left;
+  outline: 2px solid white;
 }
+
 .iconSection span {
   color: #66768a;
 }
+
 .iconSection a {
   color: white;
 }
-footer > .iconSection > span {
-  margin: 10px 15px 20px 0px;
-}
+
 .midSection {
   width: 70%;
   float: left;
 }
+
 .addressSection {
   width: 15%;
   color: white;
+  outline: 2px solid lightcoral;
   float: left;
 }
+
 .addressSection > div > span {
   font-size: 1rem;
 }
-.copyrightSection {
-  padding: 20px 0px 0px 0px;
+
+.footerSection {
+  padding: 20px 0;
   font-size: 1.5rem;
   float: left;
   color: white;
   width: 100%;
   border-top: solid 2px white;
 }
-.copyrightSection img {
+
+.footerSection img {
   float: right;
 }
+
 footer i {
-  margin: 0px 10px 0px 0px;
+  margin: 0 10px 0 0;
 }
+
 footer > section > section > div > a {
   text-decoration: none;
-  margin: 10px 29% 20px 0px;
+  margin: 10px 29% 20px 0;
 }
 
 /* .new-line::before {
-  content: "\A";
-  white-space: pre;
-} */
+    content: "\A";
+    white-space: pre;
+    } */
 
 /******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+    /* ADDITIONAL STYLES
+    /*******************************************/
 
 @media (max-width: 600px) {
 }

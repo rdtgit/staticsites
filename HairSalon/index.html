@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,12 +18,31 @@
     <title>Document</title>
   </head>
   <body>
-    <header class="flex">
+    <!-- header -->
+    <header class="flex sticky">
+      <!-- hamMenu -->
+
+      <label class="ham">
+        <input type="checkbox" title="hamMenu" />
+      </label>
+
+      <aside class="sidebar">
+        <nav>
+          <div>HOME</div>
+          <div>ABOUT</div>
+          <div>SERVICES</div>
+          <div>LOOKBOOK</div>
+          <div>NEWS</div>
+          <div>CONTACT</div>
+        </nav>
+      </aside>
+
+      <!-- hamMenu -->
       <section>
         <img src="img/dark_logo.png" alt="dark_logo" />
       </section>
       <section>
-        <nav>
+        <nav class="navbar">
           <ul class="flex">
             <li><a href="#">HOME</a></li>
             <li><a href="#">ABOUT</a></li>
@@ -47,6 +69,7 @@
         <span><a href="#">- BOOK ONLINE</a></span>
       </section>
     </header>
+    <!-- header -->
     <section class="background-image">
       <h1>BLONDE</h1>
       <h1>& HIGHLIGHT</h1>
@@ -112,64 +135,66 @@
       </section>
     </section>
     <!-- HAIR STYLISTS -->
-    <section class="hair_stylist flex">
-      <section>
-        <img src="img/Styler-01.jpg" alt="styler1" />
-        <div>
-          <p>ALITA WILLIMS</p>
-          <span class="centered-text">- COLOURIST</span>
-        </div>
+    <section class="padStylerAdPhoto">
+      <section class="hair_stylist flex">
+        <section>
+          <img src="img/Styler-01.jpg" alt="styler1" />
+          <div>
+            <p>ALITA WILLIMS</p>
+            <span class="centered-text">- COLOURIST</span>
+          </div>
+        </section>
+        <section>
+          <img src="img/Styler-02.jpg" alt="styler1" />
+          <div>
+            <p>AYESHA LAKE</p>
+            <span class="centered-text">- STYLER</span>
+          </div>
+        </section>
+        <section>
+          <img src="img/Styler-03.jpg" alt="styler1" />
+          <div>
+            <p>ALEN SMITH</p>
+            <span class="centered-text">- BEAUTICIAN</span>
+          </div>
+        </section>
       </section>
-      <section>
-        <img src="img/Styler-02.jpg" alt="styler1" />
-        <div>
-          <p>AYESHA LAKE</p>
-          <span class="centered-text">- STYLER</span>
-        </div>
-      </section>
-      <section>
-        <img src="img/Styler-03.jpg" alt="styler1" />
-        <div>
-          <p>ALEN SMITH</p>
-          <span class="centered-text">- BEAUTICIAN</span>
-        </div>
-      </section>
-    </section>
-    <!-- ADD SECTION -->
-    <section class="ad_section">
-      <section>
-        <p>COLOUR DAY OFFER!</p>
+      <!-- ADD SECTION -->
+      <section class="ad_section">
+        <section>
+          <p>COLOUR DAY OFFER!</p>
 
-        <p><span>-10%</span> ON HAIRCUT</p>
-        <p>COLOR AND HIGHLIGHT</p>
-        <button>- BOOK APPOINTMENT</button>
+          <p><span>-10%</span> ON HAIRCUT</p>
+          <p>COLOR AND HIGHLIGHT</p>
+          <button>- BOOK APPOINTMENT</button>
+        </section>
+        <section><img alt="ad_image" src="img/ad.png" /></section>
       </section>
-      <section><img alt="ad_image" src="img/ad.png" /></section>
-    </section>
-    <!-- LOOKBOOK SECTION -->
-    <div class="lookbook_header">
-      <p>OUR LOOKBOOK</p>
-      <p>_</p>
-    </div>
-    <section class="photo_grid">
-      <section>
-        <img alt="gallery_photo" src="img/Gallery-01.jpg" />
-      </section>
-      <section class="grid_row_2">
-        <img alt="gallery_photo" src="img/Masonry-01.jpg" />
-      </section>
-      <section>
-        <img alt="gallery_photo" src="img/Gallery-02.jpg" />
-      </section>
+      <!-- LOOKBOOK SECTION -->
+      <div class="lookbook_header">
+        <p>OUR LOOKBOOK</p>
+        <p>_</p>
+      </div>
+      <section class="photo_grid">
+        <section>
+          <img alt="gallery_photo" src="img/Gallery-01.jpg" />
+        </section>
+        <section class="grid_row_2">
+          <img alt="gallery_photo" src="img/Masonry-01.jpg" />
+        </section>
+        <section>
+          <img alt="gallery_photo" src="img/Gallery-02.jpg" />
+        </section>
 
-      <section class="grid_row_2">
-        <img alt="gallery_photo" src="img/Masonry-03.jpg" />
-      </section>
-      <section class="grid_row_2">
-        <img alt="gallery_photo" src="img/Masonry-02.jpg" />
-      </section>
-      <section>
-        <img alt="gallery_photo" src="img/Gallery-04.jpg" />
+        <section class="grid_row_2">
+          <img alt="gallery_photo" src="img/Masonry-03.jpg" />
+        </section>
+        <section class="grid_row_2">
+          <img alt="gallery_photo" src="img/Masonry-02.jpg" />
+        </section>
+        <section>
+          <img alt="gallery_photo" src="img/Gallery-04.jpg" />
+        </section>
       </section>
     </section>
   </body>

@@ -45,11 +45,19 @@ header {
   height: 50px;
   width: 100%;
 }
+
 header nav {
   color: black;
 }
 header nav ul {
   gap: 3rem;
+}
+.sticky {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
 }
 header nav ul li a,
 header > section > span > a {
@@ -59,6 +67,57 @@ header > section > span > a {
   font-size: 1.5rem;
   font-family: "EB Garamond", serif;
 }
+/* HAMBURGER MENU */
+:root {
+  --bar-width: 20px;
+  --bar-height: 4px;
+  --ham-gap: 2px;
+  --foreground: #333;
+  --background-color: white;
+  --ham-margin: 8px;
+  --animation-timing: 200ms ease-in-out;
+  --ham-height: calc(var(--bar-height) * 3 + var(--ham-gap) * 2);
+}
+.ham::before,
+.ham::after,
+.ham input {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--foreground);
+  border-radius: 9999px;
+  transform-origin: left center;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing);
+}
+.ham input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+.ham:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+}
+.ham:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+}
+.ham input:checked {
+  opacity: 0;
+  width: 0;
+}
+.ham,
+.sidebar {
+  display: none;
+}
+/* HAMBURGER MENU */
 header a:hover {
   color: hotpink;
 }
@@ -346,7 +405,57 @@ h4 {
   }
 }
 
+/* WIDTH 1000 */
+
 @media (max-width: 1000px) {
+  .flex {
+    justify-content: center;
+    gap: 8rem;
+  }
+  .ham {
+    --x-width: calc(var(--ham-height) * 1.41421356237);
+    display: flex;
+    flex-direction: column;
+    gap: var(--ham-gap);
+    width: max-content;
+    position: absolute;
+    /* change pixels later */
+    top: var(--ham-margin);
+    left: var(--ham-margin);
+    z-index: 2;
+    cursor: pointer;
+  }
+  .sidebar {
+    display: block;
+    transition: translate var(--animation-timing);
+    translate: -100%;
+    padding: 0.5rem 1rem;
+    padding-top: calc(var(--ham-height)+ var(--ham-margin)+1rem);
+    background-color: black;
+    color: black;
+    max-width: 10rem;
+    min-height: 100vh;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    transform: translateY(-1);
+  }
+  .ham:has(input:checked) + .sidebar {
+    translate: 0;
+  }
+  .sidebar nav {
+    font-size: 1.5rem;
+    padding: 1rem auto;
+    color: white;
+    font-family: "EB Garamond", serif;
+  }
+  .sidebar nav div {
+    margin-top: 1rem;
+  }
+
+  .navbar {
+    display: none;
+  }
   .rotateText {
     display: none;
   }
@@ -365,7 +474,15 @@ h4 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* WIDTH 600 */
 @media (max-width: 600px) {
+  .flex {
+    gap: 2rem;
+  }
+  .momentum {
+    padding: 0 2rem;
+  }
   .ad_section section + section {
     display: none;
   }

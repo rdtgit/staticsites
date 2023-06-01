@@ -263,17 +263,18 @@ h4 {
 }
 .momentum img {
   width: 100%;
-  height: 100%;
+
+  height: auto;
 }
-.momentum img + img {
+/* .momentum img + img {
   top: 39%;
   left: 39%;
   position: absolute;
-  width: 25%;
+  max-width: 25%;
   height: 25%;
   transform: translate((-50%, -50%));
   z-index: 1;
-}
+} */
 /* MOMENTUM SECTION */
 /* HAIR STYLISTS */
 .hair_stylist {
@@ -398,16 +399,33 @@ h4 {
   }
   .momentum {
     display: block;
-    padding: 2rem;
+  }
+  .momentum img {
+    margin-top: 4rem;
+    max-width: 40rem;
+    min-width: 35rem;
+    height: auto;
   }
   .momentum section {
-    margin: 2rem auto;
+    width: 35rem;
+
+    display: block;
+    margin: 0 auto;
+  }
+  .img-container {
+    text-align: center;
+    margin: 0 auto;
   }
 }
 
 /* WIDTH 1000 */
 
 @media (max-width: 1000px) {
+  .momentum img {
+    max-width: 35rem;
+    min-width: 35rem;
+    height: auto;
+  }
   .flex {
     justify-content: center;
     gap: 8rem;
@@ -476,12 +494,20 @@ h4 {
 }
 
 /* WIDTH 600 */
+
 @media (max-width: 600px) {
+  .background-image {
+    padding-left: 1vmin;
+  }
   .flex {
     gap: 2rem;
   }
   .momentum {
-    padding: 0 2rem;
+    padding: 0;
+  }
+  .momentum section {
+    padding: 2rem auto;
+    margin: 2rem auto;
   }
   .ad_section section + section {
     display: none;

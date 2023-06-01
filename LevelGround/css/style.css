@@ -266,8 +266,26 @@ footer > section > section > div > a {
     margin: 0 auto;
   }
 }
-/* @media (max-width: 400px) {
-  .img-section div {
-    margin: 0;
+@media (max-width: 500px) {
+  .fiftysection img {
+    width: 100%;
   }
-} */
+  .copyrightSection {
+  }
+  .copyrightSection div {
+    float: left;
+    width: 50%;
+  }
+  .copyrightSection div img {
+    float: right;
+  }
+  .midSection {
+    width: 20%;
+  }
+  .addressSection {
+    width: 40%;
+  }
+  .iconSection {
+    width: 40%;
+  }
+}

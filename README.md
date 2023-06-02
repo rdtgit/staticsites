@@ -1,6 +1,4 @@
-# staticsites
-
-# H1 Sites static pages
+# <p align="center">Staticsites</p>
 
 <p>Creating static websites to help further my knowledge with HTML, CSS, and JS.</p>
 <p align="center"><a href="https://rdtgit.github.io/staticsites/HairSalon/">Live</a></p>
